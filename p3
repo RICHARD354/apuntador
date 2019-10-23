@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(int argc, char *argv[]) {
+	int *p, *pp;
+	printf("%p\n", &p);
+	printf("%p\n", p);
+	printf("%p\n", &pp);
+	printf("%p\n", pp);
+	p = (int *) malloc(sizeof(int));
+	pp = p;
+	printf("%p\n", &p);
+	printf("%p\n", p);
+	printf("%p\n", &pp);
+	printf("%p\n", pp);
+	p+=1000;
+	*pp = 100;
+	printf("%d\n", *pp);
+	free(pp);
+	pp = NULL;
+	p = NULL;
+	printf("%p\n", p);
+	return 0;
+}
