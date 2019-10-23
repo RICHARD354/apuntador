@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(int argc, char *argv[]) {
+	int **p, **a;
+	int m, n, r, q, i, j;
+	printf("Ingresa el numero de columnas de la matriz 1\n");
+	scanf("%d", &m);
+	printf("Ingresa el numero de filas de la matriz 1\n");
+	scanf("%d", &n);
+	printf("Ingresa el numero de columnas de la matriz 2\n");
+	scanf("%d", &p);
+	printf("Ingresa el numero de filas de la matriz 2\n");
+	scanf("%d", &q);
+	a = (int **) malloc(m*n*sizeof(int*));
+	
+	for(i=0; i<=m; i++){
+		for(j=0; j<=n; i++){
+			printf("ingresa el valor %d, %d\n", i, j);
+			scanf("%d", (a[i][j]));
+		}
+	}
+	free(a);
+	a=NULL;
+	return 0;
+}
